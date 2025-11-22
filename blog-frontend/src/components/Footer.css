@@ -1,0 +1,56 @@
+/* Footer Container */
+.footer {
+  /* Ensure padding for desktop and mobile */
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  background-color: #212529; /* Dark background */
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Paragraphs inside footer with muted style */
+.footer .text-muted {
+  /* Lighter gray but with enough contrast on dark bg */
+  color: #bbb !important;
+  font-size: 0.875rem; /* Slightly smaller for info text */
+  line-height: 1.4;
+}
+
+/* Footer links */
+.footer-link {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: #0d6efd; /* Bootstrap primary blue */
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Social Icons */
+.social-icons a {
+  color: #ccc;
+  font-size: 1.2rem;
+  margin-right: 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:last-child {
+  margin-right: 0;
+}
+
+.social-icons a:hover,
+.social-icons a:focus {
+  color: #0d6efd;
+  outline: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  .footer .text-muted {
+    font-size: 0.8rem;
+  }
+}

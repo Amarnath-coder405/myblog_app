@@ -1,0 +1,218 @@
+/* Reset and base */
+:root {
+  --color-bg-light: #ffffff;
+  --color-bg-dark: #1a1a1a;
+  --color-text-light: #212529;
+  --color-text-dark: #f0f0f0;
+  --color-primary: #0d6efd;
+  --color-primary-dark: #3a8bfd;
+
+  --color-navbar-bg-light: #f8f9fa;
+  --color-navbar-bg-dark: #212529;
+
+  --color-badge-bg-light: #dc3545;
+  --color-badge-bg-dark: #ff6b6b;
+
+  --color-link-hover-light: #0b5ed7;
+  --color-link-hover-dark: #66b2ff;
+
+  --transition-speed: 0.3s;
+}
+
+/* Theme attribute selectors */
+html[data-theme='light'] {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-light);
+}
+
+html[data-theme='dark'] {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+}
+
+/* Navbar base */
+.custom-navbar {
+  background: var(--color-navbar-bg-dark);
+  color: var(--color-text-dark);
+  transition: background var(--transition-speed), color var(--transition-speed);
+  font-weight: 500;
+}
+
+/* Light mode navbar overrides */
+html[data-theme='light'] .custom-navbar {
+  background: var(--color-navbar-bg-light);
+  color: var(--color-text-light);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+}
+
+/* Navbar brand */
+.custom-navbar .navbar-brand {
+  color: inherit;
+  font-size: 1.4rem;
+}
+
+.custom-navbar .brand-highlight {
+  color: var(--color-primary);
+}
+
+/* Navbar links */
+.custom-navbar .nav-link {
+  color: inherit;
+  font-weight: 500;
+  transition: color var(--transition-speed);
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+  color: var(--color-primary);
+}
+
+/* Navbar toggler icon */
+.custom-navbar .navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+
+html[data-theme='light'] .custom-navbar .navbar-toggler-icon {
+  filter: none;
+}
+
+/* Theme toggle button */
+.btn-theme-toggle {
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-speed);
+}
+
+.btn-theme-toggle:hover {
+  color: var(--color-primary);
+}
+
+/* Notification icon */
+.bell-icon {
+  color: var(--color-text-dark);
+  cursor: pointer;
+  transition: color var(--transition-speed);
+}
+
+html[data-theme='light'] .bell-icon {
+  color: var(--color-text-light);
+}
+
+/* Notification badge */
+.notification-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: var(--color-badge-bg-dark);
+  color: white;
+  border-radius: 50%;
+  padding: 0 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.2;
+  user-select: none;
+  transition: background var(--transition-speed);
+}
+
+html[data-theme='light'] .notification-badge {
+  background: var(--color-badge-bg-light);
+}
+
+/* Profile dropdown */
+.profile-dropdown {
+  cursor: pointer;
+}
+
+.profile-icon-svg {
+  color: var(--color-text-dark);
+  transition: color var(--transition-speed);
+}
+
+html[data-theme='light'] .profile-icon-svg {
+  color: var(--color-text-light);
+}
+
+.dropdown-card {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  width: 220px;
+  background: var(--color-navbar-bg-dark);
+  color: var(--color-text-dark);
+  border-radius: 6px;
+  box-shadow: 0 8px 16px rgb(0 0 0 / 0.2);
+  padding: 15px;
+  z-index: 1000;
+  user-select: none;
+  transition: background var(--transition-speed), color var(--transition-speed);
+}
+
+html[data-theme='light'] .dropdown-card {
+  background: var(--color-navbar-bg-light);
+  color: var(--color-text-light);
+}
+
+/* Dropdown card text & small */
+.dropdown-card h6 {
+  font-weight: 600;
+}
+
+.dropdown-card small {
+  color: gray;
+  font-size: 0.85rem;
+}
+
+/* Button inside dropdown */
+.dropdown-card .btn-outline-danger {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-card .btn-outline-danger:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* Paragraph text & pagination number example styling for theme */
+p, .pagination li a, .pagination li span {
+  transition: color var(--transition-speed);
+}
+
+html[data-theme='dark'] p,
+html[data-theme='dark'] .pagination li a,
+html[data-theme='dark'] .pagination li span {
+  color: var(--color-text-dark);
+}
+
+html[data-theme='light'] p,
+html[data-theme='light'] .pagination li a,
+html[data-theme='light'] .pagination li span {
+  color: var(--color-text-light);
+}
+
+/* Pagination styles (assuming bootstrap) */
+.pagination .page-link {
+  color: inherit;
+  background-color: transparent;
+  border: 1px solid transparent;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.pagination .page-link:hover {
+  color: var(--color-primary);
+  background-color: transparent;
+  border-color: var(--color-primary);
+}
+
+.pagination .page-item.active .page-link {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+}
