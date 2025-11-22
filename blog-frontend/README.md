@@ -58,8 +58,8 @@ How to Run the Project Locally
 
 1. Clone the repository:
 
-   git clone https://github.com/Amarnath-coder405/myblog
-   cd myblog
+   git clone https://github.com/Amarnath-coder405/myblog_app
+   cd myblog_app
 
 2. Install backend dependencies:
 
@@ -68,25 +68,25 @@ How to Run the Project Locally
 
 3. Install frontend dependencies:
 
-   cd ../client
+   cd ../blog-frontend
    npm install
 
 4. Set up environment variables:
 
    In the server folder, create a file named `.env` and add the following:
 
-   MONGO_URI="#"
-   PORT=5000
+   MONGO_URI="Your mongo_db uri"
+   PORT=3001
 
 5. Start the backend server:
 
    cd server
-   npm start
+   npm run start
 
 6. Start the frontend development server:
 
    cd ../blog-frontend
-   npm start
+   npm run start
 
 7. Open your browser and go to:
 
@@ -96,6 +96,6 @@ Author
 ------
 
 Developed by Amarnath
-GitHub Profile: https://github.com/Amarnath-coder405/myblog.git
+GitHub Profile: https://github.com/Amarnath-coder405/myblog_app.git
 
 If you find this project useful, please consider starring the repository on GitHub.
