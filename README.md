@@ -18,7 +18,7 @@ Features
 - Code is clean and well-commented for easy maintenance
 
 Technologies Used
------------------
+------------------
 
 Frontend:
 - React.js
