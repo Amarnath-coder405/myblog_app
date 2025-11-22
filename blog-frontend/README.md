@@ -75,12 +75,12 @@ How to Run the Project Locally
 
    In the server folder, create a file named `.env` and add the following:
 
-   MONGO_URI="Your mongo_db uri"
+   MONGO_URI="mongo_db uri"
    PORT=3001
 
 5. Start the backend server:
 
-   cd server
+   cd server 
    npm run start
 
 6. Start the frontend development server:
