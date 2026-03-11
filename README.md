@@ -1,5 +1,5 @@
 React Blog Website:
-====================
+===================
 
 This is a full-stack blog application built using React for the frontend and Node.js with Express for the backend. MongoDB is used as the database. The application allows users to view blog posts, read individual articles, comment on posts, search for content, and share blog posts through social media. The design is fully responsive and optimized for various devices and browsers.
 
